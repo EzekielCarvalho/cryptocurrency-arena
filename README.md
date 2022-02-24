@@ -1,4 +1,4 @@
-# Welcome to the CryptoCurrency Arena ₿
+# Welcome to thetoCurrency Arena ₿
 
 ![Version](https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000)
 ![issues](https://img.shields.io/github/issues/EzekielCarvalho/portugues-goa)

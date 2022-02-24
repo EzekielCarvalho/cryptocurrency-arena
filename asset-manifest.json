@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/cryptocurrency-arena/static/css/main.16d2ddbc.css",
+    "main.js": "/cryptocurrency-arena/static/js/main.4c737fd7.js",
+    "static/js/787.da2927c7.chunk.js": "/cryptocurrency-arena/static/js/787.da2927c7.chunk.js",
+    "index.html": "/cryptocurrency-arena/index.html",
+    "main.16d2ddbc.css.map": "/cryptocurrency-arena/static/css/main.16d2ddbc.css.map",
+    "main.4c737fd7.js.map": "/cryptocurrency-arena/static/js/main.4c737fd7.js.map",
+    "787.da2927c7.chunk.js.map": "/cryptocurrency-arena/static/js/787.da2927c7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.16d2ddbc.css",
+    "static/js/main.4c737fd7.js"
+  ]
+}

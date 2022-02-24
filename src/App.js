@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import CoinsFromMarket from './CoinsFromMarket';                  // For the cryptocurrency in general
+import './App.css';                                                // Styles
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';    // Used to help enable dynamic routing in the app
+import Coin from './Coin';                                      // Individual coins by ID
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Router>
+      <div>
+      <Routes>
+      <Route path='/' element={ <CoinsFromMarket />} />              {/*  To render the cryptocurrency in general */}
+      <Route path='/coin/:id' element={ <Coin />} />                {/*   To render individual cryptocurrency details by ID */}
+      </Routes>
     </div>
+    </Router> 
   );
 }
-
 export default App;

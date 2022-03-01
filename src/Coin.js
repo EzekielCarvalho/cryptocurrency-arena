@@ -28,7 +28,7 @@ return (
             <div className='cryptocurrency-spec-container'>
 
             {console.log(Object.entries(info))}              {/*  for testing */}
-                {Object.entries(info).slice(0, 1).map((infobit) => (      // The problem arose in trying to fetch the individual coin ID data because the response from the API kept giving me an object as a response as opposed to an array, what I was looking for. So I had to use Object,entries to convert the object returned to an array. I used slice to limit the results obtained from the API. Then I used map to loop through the array. Map requires an array, which is what we have successfully obtained.
+                {Object.entries(info).slice(0, 1).map((infobit) => (      // The problem arose in trying to fetch the individual coin ID data because the response from the API kept giving me an object as a response as opposed to an array, what I was looking for. Objects cannot be iterated unless they use the iterable protocol. I had to use object.entries to iterate over the properties. I also included the use of map to help further. I used slice to limit the results obtained from the API. Then I used map to loop through the array. Map requires an array, which is what we have successfully obtained.
                     
                     <div className='coin-spec' key={infobit}> 
                     <img className='coin-image' src={info.image.large} alt='' />                 {/* with the help of map, we're able to individually fetch the data from the API. I decided to add the image of the cryptocurrency despite not being asked, for the sake of beauty */}

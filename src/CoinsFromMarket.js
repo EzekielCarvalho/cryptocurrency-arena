@@ -21,27 +21,46 @@ useEffect(() => {                                   // This tells our component 
     return (
         <div>
             <h1>Cryptocurrency Arena</h1>
-            <div className='coin-chest'>
-                {coins && coins.length > 0          //conditional rendering using the && logical operator. if the coins and length of coins are greater than 0 then go ahead with the below steps, else render the loading option
+            <h4>Please click on the image of each cryptocurrency to view details</h4>
+
+            <div className="coin-chest">
+            <table class="table">  
+
+  <thead>
+      <th>Asset</th>
+      <th>Name</th>
+      <th>Symbol</th>
+      <th>Current-Price</th>
+      <th>High24h</th>
+      <th>Low24h</th>
+  </thead>
+  <tbody>
+  {coins && coins.length > 0          //conditional rendering using the && logical operator. if the coins and length of coins are greater than 0 then go ahead with the below steps, else render the loading option
                  ? coins.map((coin) => (           // we use map to iterate over the array, which here is "coins" so that we can iterate over the array of data that we've received from the API. We can manipulate this data that we receive to display what we want.
-                    <div className='coin' key={coin.id}> 
-                    <img className='coin-image' src={coin.image} alt='' /> {/* the image we get from the iteration and additional data below*/}
-                    <ul>
-                    <li><b><p>Name: <i>{coin.name}</i></p></b></li>
-                    <li><b><p>Symbol: <i>{coin.symbol}</i></p></b></li>
-                    <li><b><p>Current Price: <i>{coin.current_price}</i></p></b></li>
-                    <li><b><p>High 24 Hour Rate: <i>{coin.high_24h}</i></p></b></li>
-                    <li><b><p>Low 24 Hour Rate: <i>{coin.low_24h}</i></p></b></li>
-                    <li><b><Link to={`/coin/${coin.id}`}>Check Coin Details</Link> </b></li>   {/*  link to individual coin detail specifications */}
-                    </ul>
-                    </div>
-                
-                ))
-                : "Loading Coins... Please wait..."        // our else statement 
+    <tr>
+      <td label="Asset"><Link to={`/coin/${coin.id}`}><img  src={coin.image} alt='' /></Link></td> {/* the image we get from the iteration and additional data below*/}{/*  link to individual coin detail specifications */}
+      <td label="Name"><strong>{coin.name}</strong></td>
+      <td label="Symbol"><strong>{coin.symbol}</strong></td>
+      <td label="Current-Price"><strong>{coin.current_price}</strong></td>
+      <td label="High24h"><strong>{coin.high_24h}</strong></td>
+      <td label="Low24h"><strong>{coin.low_24h}</strong></td>
+
+    </tr>
+    
+    
+
+    ))
+                : "Loading Coins... "        // our else statement 
                 }
+                </tbody>
+               
+
+                </table>
+</div>
             </div>
-        </div>
         );
 };
+
+
 
 export default CoinsFromMarket;

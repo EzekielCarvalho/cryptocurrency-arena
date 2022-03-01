@@ -1,6 +1,6 @@
 # Welcome to the CryptoCurrency Arena ₿
 
-![Version](https://img.shields.io/badge/version-1.0-blue.svg?cacheSeconds=2592000)
+![Version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000)
 ![issues](https://img.shields.io/github/issues/EzekielCarvalho/portugues-goa)
 ![stars](https://img.shields.io/github/stars/EzekielCarvalho/portugues-goa)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](#)
@@ -20,6 +20,7 @@
 * Fully functional application with a single link for each cryptocurrency to give necessary details
 * awesome business-style-card effect
 * User Friendly interface
+* Responsive
 
 ## Usage
 
